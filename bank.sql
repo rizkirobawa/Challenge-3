@@ -124,3 +124,35 @@ SELECT * FROM transaksi;
  16 | 2024-01-14 | 1344815451131341   | 2500000.00 | Pembelian Bitcoin               |       1
  17 | 2024-01-10 | 1344815451646291   | 4400000.00 | Pembelian Saham                 |       1
  18 | 2024-01-15 | 1111111111111111   |   70000.00 | Pembelian buku                  |       4
+
+ -- 3) Update
+UPDATE akun SET saldo = 12000000 WHERE id = 1;
+-- Read data after UPDATE;
+SELECT * FROM akun WHERE id = 1;
+ id |   username   |   password   |         email         |  no_rekening   |  pin   |    saldo    | nasabah_id
+----+--------------+--------------+-----------------------+----------------+--------+-------------+------------
+  1 | rizki_robawa | password4684 | rizkirobawa@gmail.com | 81274814217473 | 123456 | 12000000.00 |          1
+
+-- 4) Delete
+DELETE FROM transaksi where id = 18;
+-- Read data after DELETE;
+select * from transaksi;
+ id |  tanggal   | no_rekening_tujuan |   jumlah   |             berita              | akun_id
+----+------------+--------------------+------------+---------------------------------+---------
+  1 | 2024-01-01 | 9876543210987654   |  200000.00 | Pembayaran tagihan              |       2
+  2 | 2024-01-02 | 5555555555555555   |  100000.00 | Pengiriman uang kepada teman    |       3
+  3 | 2024-01-03 | 1111111111111111   |  300000.00 | Pembelian barang                |       4
+  4 | 2024-01-04 | 9999999999999999   |  500000.00 | Pengiriman uang kepada keluarga |       5
+  5 | 2024-01-05 | 1234567890123456   |  400000.00 | Penarikan tunai                 |       6
+  6 | 2024-01-06 | 1234567890123456   |  100000.00 | Pembayaran tagihan              |       6
+  7 | 2024-01-07 | 9876543210987654   |  150000.00 | Pengiriman uang kepada saudara  |       2
+  8 | 2024-01-08 | 5555555555555555   |  200000.00 | Pembelian makanan               |       3
+  9 | 2024-01-09 | 1111111111111111   |  250000.00 | Pembelian tiket                 |       4
+ 10 | 2024-01-10 | 9999999999999999   |  350000.00 | Pembayaran tagihan listrik      |       5
+ 11 | 2024-01-11 | 1234567890123456   |  600000.00 | Transfer ke akun lain           |       6
+ 12 | 2024-01-12 | 1234567890123456   |  700000.00 | Transfer ke akun lain           |       6
+ 13 | 2024-01-13 | 9876543210987654   |  250000.00 | Pembayaran tagihan telepon      |       2
+ 14 | 2024-01-14 | 5555555555555555   |  150000.00 | Pengiriman uang kepada teman    |       3
+ 15 | 2024-01-14 | 5555555555555555   | 1500000.00 | Pembelian tiket konser          |       1
+ 16 | 2024-01-14 | 1344815451131341   | 2500000.00 | Pembelian Bitcoin               |       1
+ 17 | 2024-01-10 | 1344815451646291   | 4400000.00 | Pembelian Saham                 |       1
